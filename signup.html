@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Signup page</title>
+        <script type = "text/javascript" >
+
+            function chkpasswords() {
+            
+            if (document.getElementById("firstpwd").value == ""){
+            
+            alert('You have not entered a password, please enter ');
+            
+            document.getElementById("firstpwd").focus();
+            
+            return false;
+            
+            }
+            
+            if (document.getElementById("firstpwd").value !=
+            
+            document.getElementById("secondpwd").value)
+            
+            {
+            
+            alert('The two password you entered are not same, please re-enter');
+            
+            document.getElementById("firstpwd").focus();
+            
+            document.getElementById("firstpwd").select();
+            
+            return false;
+            
+            }
+            
+            else {
+            
+            alert('The two password you entered are same');
+            
+            return true;
+            
+            }
+            
+            }
+            
+            </script>
+         
+        <link rel="stylesheet" href="signup.css">
+    </head>
+        <body style="background-image: url('img/baisakhi.jpeg')";> 
+            
+            <div class="loginbox" style="padding: 50px 30px;">
+                  <p  style="padding-top: 0px;padding-left: 70px;padding-right: 50px;padding-bottom: 30px; font-size: 15px;"> Signup Here! </p>
+                
+                <form action="signup.php" method="post" onsubmit="return(chkpasswords());">
+                    <p>Username</p>
+                    <input type="text" name="user" placeholder="Enter username" id="username">
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Enter Password" id = "firstpwd">
+                    <p>Confirm Password</p>
+                    <input type="password" name="cpassword" placeholder="Enter Password" id = "secondpwd">
+                    <input type="submit" name="signup" value="Signup">
+                    <a href="login1.php">Login here!</a>
+                </form>
+            </div>
+          
+        </body>
+    
+</html>
